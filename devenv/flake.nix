@@ -3,7 +3,6 @@
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-    template-utils.url = "github:arekisannda/templates";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
@@ -44,8 +43,6 @@
             }).env;
         };
 
-      imports = [
-        inputs.template-utils.modules.flake.devenv-setup
-      ];
+      imports = [ ];
     };
 }

@@ -5,6 +5,10 @@
     {
       apps.devenv-setup = {
         type = "app";
+        meta = {
+          description = "Setup development environment";
+        };
+
         program = pkgs.writeShellScriptBin "devenv-setup" ''
           [ -f .envrc ] && echo "Development environment configured." && exit 0
 
