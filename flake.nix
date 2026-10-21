@@ -44,9 +44,16 @@
         flake = { inherit flakeModules; };
         imports = builtins.attrValues flakeModules;
 
-        flake.templates.devenv = {
-          path = ./devenv;
-          description = "A simple development environment flake";
+        flake.templates = {
+          devenv = {
+            path = ./devenv;
+            description = "A simple development environment flake";
+          };
+
+          flake = {
+            path = ./flake;
+            description  = "Nix flake project template";
+          };
         };
       }
     );
